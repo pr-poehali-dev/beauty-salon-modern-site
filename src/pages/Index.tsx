@@ -122,40 +122,56 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-background to-muted py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="mb-4">Премиум салон красоты</Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
-                Красота в каждой детали
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Комплексный уход и индивидуальный подход к каждому клиенту.
-                Современные технологии и профессиональные мастера.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8">
-                  Записаться онлайн
-                </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8">
-                  <Icon name="Phone" size={20} className="mr-2" />
-                  Позвонить
-                </Button>
-              </div>
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/20 to-background">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url(/img/26949faa-8267-455a-a92e-e4663b26bf2c.jpg)",
+          }}
+        ></div>
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <Badge className="mb-6 bg-primary/90 text-primary-foreground">
+            Премиум салон красоты
+          </Badge>
+          <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+            Красота в каждой детали
+          </h1>
+          <p className="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
+            Комплексный уход и индивидуальный подход к каждому клиенту.
+            Современные технологии и профессиональные мастера.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" className="text-lg px-10 py-4 h-auto">
+              Записаться онлайн
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-10 py-4 h-auto bg-white/10 border-white/20 text-white hover:bg-white/20"
+            >
+              <Icon name="Phone" size={20} className="mr-2" />
+              Позвонить
+            </Button>
+          </div>
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold mb-2">5+</div>
+              <div className="text-sm">лет опыта</div>
             </div>
-            <div className="relative">
-              <img
-                src="/img/26949faa-8267-455a-a92e-e4663b26bf2c.jpg"
-                alt="Салон красоты"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-4 rounded-lg">
-                <div className="text-2xl font-bold">5+</div>
-                <div className="text-sm">лет опыта</div>
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold mb-2">1000+</div>
+              <div className="text-sm">довольных клиентов</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold mb-2">15+</div>
+              <div className="text-sm">услуг красоты</div>
             </div>
           </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70">
+          <Icon name="ChevronDown" size={32} className="animate-bounce" />
         </div>
       </section>
 
